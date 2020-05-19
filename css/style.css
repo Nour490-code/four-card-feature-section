@@ -103,7 +103,7 @@ h3{
     grid-area: calc;
     border-top: 4px solid hsl(212, 86%, 64%); 
 }
-@media screen and (min-width: 360px){
+@media screen and (max-width: 575.98px){
     .main-header{
         margin: 0 auto;
         text-align: center;
