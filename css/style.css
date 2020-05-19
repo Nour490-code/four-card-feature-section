@@ -1,0 +1,152 @@
+:root{
+ --bg-color:hsl(0, 0%, 98%);
+ --bg-box:  rgb(251, 251, 251);
+ --shade-color:rgba(230, 222, 222, 0.74);
+ --txt-color:hsl(234, 12%, 34%);
+ --font-200:200;
+ --font-400:400;
+ --line-height:1.5;
+}
+body{
+    box-sizing: border-box;
+    font-size: 15px;
+    padding:0;
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--txt-color);
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: hsl(212, 86%, 64%);
+}
+.main-header{
+    margin-left: 1.5rem;
+    text-align: center;
+    line-height: 1.3;
+}
+.first{
+    font-weight: var(--font-200);
+    margin: 1.5em auto;
+    margin-bottom : 0px;
+}
+.second{
+    margin:0 auto 0.3em;
+    padding-left:15px;
+}
+.header-p{
+    font-weight: var(--font-200);
+    width: 40%;
+    margin: 0 auto;
+    margin-left: 400px;
+    line-height:var(--line-height)
+}
+p{
+    font-weight: var(--font-200);
+    margin-top: 10px;
+}
+h3{
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.showcase{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas: 
+    "  .    team   . "
+    "superv   .  calc"
+    " .     karma  . "; 
+    grid-gap: 20px;
+    width:50%;
+    text-align: center;
+    font-weight: var(--font-200);
+    margin-left: 230px;
+    margin-top:50px;
+}
+.icon{
+    margin-right:10px;
+    padding-left: 220px;
+    padding-bottom:20px ;
+}
+.txt{
+    padding-left: 15px;  
+}
+.same-row{
+    transform: translate(0,-110px);
+}
+.box{
+    width: 100%;
+    background-color: var(--bg-box);
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow:2px 5px 10px var(--shade-color);
+}
+.supervisor{
+    grid-area: superv;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.team-builder{
+    grid-area: team;
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+.karma{
+    grid-area: karma;
+    border-top: 4px solid hsl(34, 97%, 64%);
+    transform: translate(1px,-215px);
+}
+.calculator{
+    grid-area: calc;
+    border-top: 4px solid hsl(212, 86%, 64%); 
+}
+@media screen and (min-width: 360px){
+    .main-header{
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 6rem;
+        line-height: 1.6;
+    }
+    .first{
+        font-size: 27px;
+    }
+    .second{
+        font-size: 26px;
+        margin-right: 20px;
+    }
+    .header-p{
+        margin: 0 auto;
+        width: 80%;
+        line-height: 1.6;
+    }
+    .showcase{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem auto 0 auto;
+    }
+    
+    .karma{
+        transform: translate(0,0);
+    }
+    .same-row{
+        transform: translateY(0);
+    }
+    .box{
+        margin-bottom: 2.5rem;
+        width: 80vw;
+        text-align: center;
+    }
+    .icon{
+        padding:0 0 2rem 10rem;
+    }
+    .attribution{
+        margin-right: 3rem;
+        font-size: 9px;
+    }
+}
+
